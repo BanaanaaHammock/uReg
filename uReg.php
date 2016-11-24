@@ -27,6 +27,7 @@ function uReg() {
 				}
 			}			
 		}
+		
 		// register & authenticate new user
 		if($addUser && $id !== "" && $pw !== ""){
 			// specify user id
