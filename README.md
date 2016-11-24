@@ -19,7 +19,7 @@ Upon successfully uploading to your web server, your next step will be to create
 *NOTE: You'll need to keep in mind that if your rename `Database` folder, you must find and replace all `Database` references in the code, along with adding the correct path. Example: if you move `Database` Folder to `/var/local/Database`. Please update the `Database` references with the new name and path.
 
 
-**User Accounts:** 
+**Authentication:** 
 
 User accounts are simply `.php` files with a prepended user id that will look something like this: `Database/user.php` 
 
