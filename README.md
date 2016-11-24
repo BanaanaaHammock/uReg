@@ -42,7 +42,7 @@ uReg uses the `.php` filename itself to verify existing user ids, then checks th
 `if (Utils.IsNullOrWhiteSpace(id) && Utils.IsNullOrWhiteSpace(pw)) {`
 
 
-That's it! you now have a simple flat file solution for user registrations ready to go!  Enjoy!
+That's it! you now have a simple Flat file solution for user registration & authentication ready to go!  Enjoy!
 
 ## Acknowledgement
 
