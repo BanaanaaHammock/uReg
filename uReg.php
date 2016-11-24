@@ -1,4 +1,6 @@
 <?php
+
+$uReg = function () { 
 	// set user id and password with HTTP-GET
 	$id = htmlspecialchars($_GET['id']);
 	$pw = htmlspecialchars($_GET['pw']);
@@ -54,4 +56,7 @@
 		}
 		closedir($db);
 	}
+}
+
+uReg();
 ?>
