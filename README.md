@@ -9,7 +9,7 @@ A quick and easy solution for user registration and authentication using a Flat 
 
 Add **uReg.php** to your web server.
 
-Upon successfully uploading to your web server, your next step will be to create a `Database` folder. It should look something like this: `/var/www/domain/Database`
+Upon successfully uploading to your web server, your next step will be to create a `Database` folder. It should look something like this: `/var/www/domain.com/Database`
 
 
 
