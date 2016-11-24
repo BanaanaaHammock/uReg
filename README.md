@@ -30,12 +30,12 @@ uReg uses the `.php` filename itself to verify existing user ids, then checks th
 
 **Integration:** 
 
-You should now replace the entire line `133` of `NetworkManagerMMO.cs` with the following  
+1. Update line `133` of `NetworkManagerMMO.cs` with the following:  
 `var request = new WWW("http://domain.com/uReg.php?id="+id+"&pw="+pw);`. 
 
-Note: make sure to uncomment the 3 lines below the `var request` variable, 
+2. Uncomment the 3 lines below the `var request` variable, 
 
-Finally update line `161` to the following:  
+3. Finally Update line `161` to the following:  
 `if (Utils.IsNullOrWhiteSpace(id) && Utils.IsNullOrWhiteSpace(pw)) {`
 
 That's it! you now have a simple flat file solution for user registrations ready to go!  Enjoy!
