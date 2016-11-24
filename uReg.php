@@ -1,5 +1,5 @@
 <?php
-
+// uReg, A User Registration Plugin for uMMORPG by Jon Malave (http://jonmalave.com)
 $uReg = function () { 
 	// set user id and password with HTTP-GET
 	$id = htmlspecialchars($_GET['id']);
