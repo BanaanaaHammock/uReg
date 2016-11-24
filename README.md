@@ -19,7 +19,7 @@ Upon successfully uploading to your web server, your next step will be to create
 *NOTE: You'll need to keep in mind that if your rename `Database` folder, you must find and replace all `Database` references in the code, along with adding the correct path. Example: if you move `Database` Folder to `/var/local/Database`. Please update the `Database` references with the new name and path.
 
 
-**User Account:** 
+**User Accounts:** 
 
 User accounts are simply `.php` files with a prepended user id that will look something like this: `Database/user.php` 
 
@@ -28,14 +28,17 @@ Each user account stores a password in this format `<?php $userPass = 'password'
 uReg uses the `.php` filename itself to verify existing user ids, then checks the `$userPass` variable for a matching password. If successfully matched, uReg will return an `echo 'ok';` to complete the authentication with uMMORPG Login system.
 
 
-**Register/Authenticate Users:** 
+**Integration:** 
 
-For uMMORPG you you should replace the entire line `133` of `NetworkManagerMMO.cs` where you find the `request` variable with the following `var request = new WWW("http://domain.com/uReg.php?id="+id+"&pw="+pw);`. 
+You should now replace the entire line `133` of `NetworkManagerMMO.cs` with the following 
+`var request = new WWW("http://domain.com/uReg.php?id="+id+"&pw="+pw);`. 
 
-Finally make sure to uncomment the 3 lines below this, and set line `161` to the following:  
+Note: make sure to uncomment the 3 lines below the `var request` variable, 
+
+Finally update line `161` to the following:  
 `if (Utils.IsNullOrWhiteSpace(id) && Utils.IsNullOrWhiteSpace(pw)) {`
 
-That's it! you now have a simple flat file solution for user registrations ready to go! 
+That's it! you now have a simple flat file solution for user registrations ready to go!  Enjoy!
 
 ## Acknowledgement
 
