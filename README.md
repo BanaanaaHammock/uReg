@@ -31,8 +31,8 @@ phpReg uses the `.php` filename itself to verify existing user ids, then checks 
 
 For uMMORPG you you should replace the entire line `133` of `NetworkManagerMMO.cs` where you find the `request` variable with the following `var request = new WWW("http://domain.com/phpReg.php?id="+id+"&pw="+pw);`. 
 
-Finally make sure to uncomment the 3 lines below this, and set line `161` to the following: 
-`if (Utils.IsNullOrWhiteSpace(id) && Utils.IsNullOrWhiteSpace(pw)) {`.
+Finally make sure to uncomment the 3 lines below this, and set line `161` to the following:  
+`if (Utils.IsNullOrWhiteSpace(id) && Utils.IsNullOrWhiteSpace(pw)) {`
 
 That's it! you now have a simple flat file solution for user registrations ready to go! 
 
