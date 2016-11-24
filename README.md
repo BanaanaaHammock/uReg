@@ -12,7 +12,7 @@ Add **uReg.php** to your web server.
 Upon successfully uploading to your web server, your next step will be to create a `Database` folder. It should look something like this: `/var/www/domain/Database`
 
 
-**Database** 
+**Database:** 
 
 `Database` folder can be renamed if you like, and also can be moved to any path on your server. 
 
