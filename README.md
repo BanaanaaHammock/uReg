@@ -1,5 +1,5 @@
 # [phpReg](https://github.com/jonmalave/phpReg)
-Flat File PHP Registration System
+Flat File PHP Registration System for uMMORPG
 
 phpReg was created as a plugin for [uMMORPG](https://www.assetstore.unity3d.com/en/#!/content/51212) framework to easily handle user registration and authentication.
 
