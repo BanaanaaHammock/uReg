@@ -31,7 +31,7 @@ uReg uses the `.php` filename itself to verify existing user ids, then checks th
 **Integration:** 
 
 You should now replace the entire line `133` of `NetworkManagerMMO.cs` with the following 
-`var request = new WWW("http://domain.com/uReg.php?id="+id+"&pw="+pw);`. 
+ `var request = new WWW("http://domain.com/uReg.php?id="+id+"&pw="+pw);`. 
 
 Note: make sure to uncomment the 3 lines below the `var request` variable, 
 
