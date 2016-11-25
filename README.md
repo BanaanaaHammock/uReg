@@ -12,13 +12,16 @@ Add **uReg.php** to your web server.
 Upon successfully uploading to your web server, your next step will be to create a `Database` folder. It should look something like this: `/var/www/domain.com/Database`
 
 
-
 **Database:** 
 
 `Database` folder can be renamed if you like, and also can be moved to any path on your server. 
 
 *NOTE: You'll need to keep in mind that if your rename `Database` folder, you must find and replace all `Database` references in the code, along with adding the correct path. Example: if you move `Database` Folder to `/var/local/Database`. Please update the `Database` references with the new name and path.
 
+
+**Registration:** 
+
+User Registration is simple! Just enter whatever user id and password you would like to use on the uMMORPG game login screen. If the user id is not taken, uReg will create a new account with the id and password specified.
 
 
 **Authentication:** 
@@ -28,7 +31,6 @@ User accounts are simply `.php` files with a prepended user id that will look so
 Each user account stores a password in this format `<?php $userPass = 'password'; ?>` 
 
 uReg uses the `.php` filename itself to verify existing user ids, then checks the `$userPass` variable for a matching password. If successfully matched, uReg will return an `echo 'ok';` to complete the authentication with uMMORPG Login system.
-
 
 
 **Integration:** 
