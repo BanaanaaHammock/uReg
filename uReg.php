@@ -2,22 +2,22 @@
 // uReg, A User Registration Plugin for uMMORPG by Jon Malave (http://jonmalave.com)
 function uReg() { 
 	// set user id and password with HTTP-GET
-	$id = htmlspecialchars($_GET['id']);
-	$pw = htmlspecialchars($_GET['pw']);
+	$userID = htmlspecialchars($_GET['id']);
+	$userPW = htmlspecialchars($_GET['pw']);
 	
 	// register new user if set to true
-	$addUser = true;
+	$registerUser = true;
 	
 	// open database, search for existing user and authenticate, or register new user
-	if ($db = opendir("Database")) {
-		while (false !== ($userData = readdir($db))) {
-			if ($userData === "$id.php") {
-				// user exists; disable add user event
-				$addUser = false;
+	if ($database = opendir("Database")) {
+		while (false !== ($queryAccount = readdir($database))) {
+			if ($queryAccount === "$userID.php") {
+				// user exists; disable registration event
+				$registerUser = false;
 				// retrieve password from database
-				include_once("Database/$userData");	
+				include_once("Database/$queryAccount");	
 				// authenticate with password
-				if ($pw === $userPass){
+				if ($userPW === $accountPW){
 					// return successful authentication
 					echo "ok";
 				}
@@ -29,23 +29,23 @@ function uReg() {
 		}
 		
 		// register & authenticate new user
-		if($addUser && $id !== "" && $pw !== ""){
-			// specify user id
-			$newUser = "Database/$id.php";
+		if($registerUser && $userID !== "" && $userPW !== ""){
+			// set new user account with user id
+			$userAccount = "Database/$userID.php";
 			// create user account in database
-			fopen($newUser, "w");	
-			// access the new user account				
-			$addData = file_get_contents($newUser);
-			// set password to append to user account
-			$addData .= '<?php $userPass = ' . "'" . $pw . "'" . '; ?>';
-			// save password data to user account
-			file_put_contents($newUser, $addData);
+			fopen($userAccount, "w");	
+			// set access the new user account				
+			$userData = file_get_contents($userAccount);
+			// set password data to append to user account
+			$userData .= '<?php $accountPW = ' . "'" . $userPW . "'" . '; ?>';
+			// save password data to new user account
+			file_put_contents($userAccount, $userData);
 			// return successful user registration and authentication
 			echo "ok";
 			// uncomment below for testing user registration
 			//echo "new user created!";
 		}
-		closedir($db);
+		closedir($database);
 	}
 }
 uReg();
