@@ -4,6 +4,7 @@
 
 A quick and easy solution for user registration and authentication using a Flat file database approach. 
 
+[![Code Climate](https://codeclimate.com/github/jonmalave/uReg/badges/gpa.svg)](https://codeclimate.com/github/jonmalave/uReg) [![Issue Count](https://codeclimate.com/github/jonmalave/uReg/badges/issue_count.svg)](https://codeclimate.com/github/jonmalave/uReg) 
 
 ## How it works?
 
