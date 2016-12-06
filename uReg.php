@@ -3,7 +3,7 @@
 function uReg() { 
 	// set user id and password with HTTP-GET
 	$userID = htmlspecialchars($_GET['id']);
-	$userPW = htmlspecialchars($_GET['pw']);
+	$userPass = htmlspecialchars($_GET['pw']);
 	
 	// register new user if set to true
 	$registerUser = true;
@@ -17,19 +17,17 @@ function uReg() {
 				// retrieve password from database
 				include_once("Database/$queryAccount");	
 				// authenticate with password
-				if ($userPW === $accountPW){
+				if ($userPass === $accountPass){
 					// return successful authentication
 					echo "ok";
 				}
-				else {
-					// return un-successful authentication					
-					echo "invalid password";
-				}
+				// return un-successful authentication					
+				echo "invalid password";
 			}			
 		}
 		
 		// register & authenticate new user
-		if($registerUser && $userID !== "" && $userPW !== ""){
+		if($registerUser && $userID !== "" && $userPass !== ""){
 			// set new user account with user id
 			$userAccount = "Database/$userID.php";
 			// create user account in database
@@ -37,7 +35,7 @@ function uReg() {
 			// set access the new user account				
 			$userData = file_get_contents($userAccount);
 			// set password data to append to user account
-			$userData .= '<?php $accountPW = ' . "'" . $userPW . "'" . '; ?>';
+			$userData .= '<?php $accountPass = ' . "'" . $userPass . "'" . '; ?>';
 			// save password data to new user account
 			file_put_contents($userAccount, $userData);
 			// return successful user registration and authentication
