@@ -1,6 +1,6 @@
 # [uReg](https://github.com/jonmalave/uReg)
 
-**uReg** is a User Registration Plugin for [uMMORPG (v1.41) ](https://www.assetstore.unity3d.com/en/#!/content/51212) framework! 
+**uReg** is a User Registration Plugin for [uMMORPG](https://www.assetstore.unity3d.com/en/#!/content/51212) framework! 
 
 A quick and easy solution for user registration and authentication using a Flat file database approach. 
 
