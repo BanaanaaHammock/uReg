@@ -29,7 +29,7 @@ User Registration is simple! Just enter whatever user id and password you would 
 
 User accounts are simply `.php` files with a prepended user id that will look something like this: `Database/user.php` 
 
-Each user account stores a password in this format `<?php $userPass = 'password'; ?>` 
+Each user account stores a password in this format `<?php $accountPass = 'password'; ?>` 
 
 uReg uses the `.php` filename itself to verify existing user ids, then checks the `$userPass` variable for a matching password. If successfully matched, uReg will return an `echo 'ok';` to complete the authentication with uMMORPG Login system.
 
